@@ -1,0 +1,228 @@
+html{
+	font-size: 62.5%;
+	height: 100%;
+	width: 100vw;
+}
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+div.divspeakers {
+	position: relative;
+	height: 70vh;
+	background-color: #dcdcdc;
+}
+
+h2{
+	position: relative;
+	text-align: center;
+	padding-bottom: 10.5%;
+	
+	color: #292929;
+
+	font-family: "Verdana";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3.33vh;
+}
+
+h2.speakers{
+	padding-top: 12.5%;
+}
+
+div.scroll1{
+	position: relative;
+	height: 27.5%;
+	left: 8.33%;
+	padding-bottom: 8.25%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+div.ManuelSantos {
+
+	position: relative;
+	width: 55%;
+	background-color: #5b3dae;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+div.Ana{
+	position: relative;
+	width: 55%;
+	left: 4.36%;
+	background-color: #5b3dae;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+div.Timeto{
+	position: relative;
+	width: 55%;
+	left: 8.72%;
+	background-color: #5b3dae;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+div.scroll2 {
+	position: relative;
+	height: 27.5%;
+	left: 8.33%;
+	padding-bottom: 12.5%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+div.Sara{
+	position: relative;
+	width: 55%;
+	background-color: #DF7B6C;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+div.Jorge{
+	position: relative;
+	width: 55%;
+	left: 4.36%;
+	background-color: #DF7B6C;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+div.Maria{
+	position: relative;
+	width: 55%;
+	left: 8.72%;
+	background-color: #DF7B6C;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+img.speakers {
+	object-fit: cover;
+	width: 40.98%;
+	height: 81.82%;
+	position: relative;
+	left: 6.1%;
+	right: 54.92%;
+	top: 9.09%;
+	bottom: 9.09%;
+	border-radius: 4px;
+}
+
+p.header{
+	position: absolute;
+	left: 51.18%;
+	right: 6.1%;
+	top: 13%;
+	bottom: 50%;
+
+	font-family: 'Verdana';
+	font-weight: 700;
+	font-size: 1.67vh;
+	line-height: 1.33;
+
+	color: #ffffff;
+}
+
+p.info{
+	position: absolute;
+	left: 51.18%;
+	right:  6.1%;
+	top: 55%;
+	bottom: 37.73%;
+
+	font-family: 'Verdana';
+	font-weight: 400;
+	font-size: 0.9vh;
+	line-height: 1.21;
+	letter-spacing: 0.035vw;
+	color: #ffffff;
+}
+
+hr{
+	position: absolute;
+	left: 49.18%;
+	right: 6.76%;
+	top: 67.27%;
+	bottom: 32.73%;
+
+	border: 1px solid #ebeaea;
+}
+
+img.plus{
+	position: absolute;
+	width: 3%;
+	left: 50%;
+	bottom: 16.67%;
+}
+
+svg.arrow1{
+	position: fixed;
+	width: 4%;
+	bottom: 77%;
+	right: 13%;
+
+}
+
+svg.arrow2{
+	position: fixed;
+	width: 4%;
+	bottom: 58%;
+	right: 13%;
+}
+
+p.readmore{
+	position: absolute;
+	left: 56.15%;
+	right: 6.1%;
+	bottom: 15.42%;
+
+	font-family: 'Verdana';
+	font-weight: 700;
+	font-size: 1.25vh;
+	line-height: 1.22;
+
+	letter-spacing: 0.035vw;
+
+	color: #E0E0E0;
+}
+
+div.divsponsors {
+	position: relative;
+	height: 30vh;
+	background-color: #dcdcdc;
+}
+
+svg.sponsor-h {
+	position: relative;
+	width: 91%;
+	left: 5%;
+	top: -2vh;
+}
+
+svg.subspon-l1 {
+	position: relative;
+	left: 5.5%;
+	width: 88%;
+	top: -1vh;
+}
+
+svg.subspon-l2 {
+	position: relative;
+	left: 5.5%;
+	width: 88%;
+	top: -1vh;
+}
