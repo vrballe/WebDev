@@ -1,4 +1,5 @@
 html{
+	position: absolute;
 	font-size: 62.5%;
 	height: 100%;
 	width: 100vw;
@@ -32,28 +33,34 @@ h2.speakers{
 	padding-top: 12.5%;
 }
 
-div.scroll1{
+div.day1_speakers_gallery{
 	position: relative;
 	height: 27.5%;
 	left: 8.33%;
 	padding-bottom: 8.25%;
-	display: flex;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	flex-wrap: nowrap;
-	overflow-x: auto;
+	display: flex;
+	-webkit-overflow-scrolling: touch;
+	
 }
-div.ManuelSantos {
+div.day1_card1 {
 
 	position: relative;
 	width: 55%;
+	max-width: 500px;
 	background-color: #5b3dae;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	flex: 0 0 auto;
 }
 
-div.Ana{
+div.day1_card2{
 	position: relative;
 	width: 55%;
+	max-width: 500px;
 	left: 4.36%;
 	background-color: #5b3dae;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
@@ -61,9 +68,10 @@ div.Ana{
 	flex: 0 0 auto;
 }
 
-div.Timeto{
+div.day1_card3{
 	position: relative;
 	width: 55%;
+	max-width: 500px;
 	left: 8.72%;
 	background-color: #5b3dae;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
@@ -71,7 +79,7 @@ div.Timeto{
 	flex: 0 0 auto;
 }
 
-div.scroll2 {
+div.day2_speakers_gallery {
 	position: relative;
 	height: 27.5%;
 	left: 8.33%;
@@ -81,18 +89,21 @@ div.scroll2 {
 	overflow-x: auto;
 }
 
-div.Sara{
+div.day2_card1{
 	position: relative;
 	width: 55%;
+	max-width: 500px;
 	background-color: #DF7B6C;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	flex: 0 0 auto;
 }
 
-div.Jorge{
+div.day2_card2{
 	position: relative;
 	width: 55%;
+	max-width: 500px;
+
 	left: 4.36%;
 	background-color: #DF7B6C;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
@@ -100,9 +111,10 @@ div.Jorge{
 	flex: 0 0 auto;
 }
 
-div.Maria{
+div.day2_card3{
 	position: relative;
 	width: 55%;
+	max-width: 500px;
 	left: 8.72%;
 	background-color: #DF7B6C;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
@@ -110,7 +122,7 @@ div.Maria{
 	flex: 0 0 auto;
 }
 
-img.speakers {
+img.img_speakers {
 	object-fit: cover;
 	width: 40.98%;
 	height: 81.82%;
