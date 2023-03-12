@@ -1,240 +1,261 @@
 html{
 	position: absolute;
-	font-size: 62.5%;
-	height: 100%;
-	width: 100vw;
+	font-size: 62.5%; /* easier to convert to rem */
+	height: 100%; 
+	width: 100%; 
+	/* root = 100% x 100% */
 }
 * {
 	margin: 0;
 	border: 0;
 	padding: 0;
+	/* Set all margin, borders and paddings to 0, just adjust values when needed. */
 }
 
-div.divspeakers {
-	position: relative;
-	height: 70vh;
+/* ----------------------------speakers--------------------------------- */
+
+.speakers_container {
 	background-color: #dcdcdc;
+	overflow: scroll; /* Just shows overflow content when scrolling */
+
 }
 
-h2{
-	position: relative;
+.speakers_title{
 	text-align: center;
-	padding-bottom: 10.5%;
+	padding-bottom: 10%; /* % of .speakers_container height */
 	
 	color: #292929;
 
-	font-family: "Verdana";
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 3.33vh;
+	font-size: 6vh; /* % of entire viewport height */
+	padding-top: 10%;
 }
 
-h2.speakers{
-	padding-top: 12.5%;
-}
-
-div.day1_speakers_gallery{
+.day1_speakers_gallery{
 	position: relative;
-	height: 27.5%;
-	left: 8.33%;
-	padding-bottom: 8.25%;
-	scroll-snap-type: x mandatory;
-	overflow-x: scroll;
+	left: 8%; /* % of .speakers_container width, vw would result the same here */
+	padding-bottom: 8%;
+
+	display: flex; /* Display cards in flexbox */
+	flex-wrap: nowrap; /* Horizontal */
+	scroll-snap-type: x mandatory; /* Mandatory scroll on x axis */
+	overflow-x: auto; /* While there's overflow, it will show a scrollbar */
 	overflow-y: hidden;
-	flex-wrap: nowrap;
+	
+	-webkit-overflow-scrolling: touch; /* More dynamic scorll */
+	
+}
+.day1_card1 {
+	position: relative;
+	height: 27vh; /* '%' didn't work here */
+	width: 77%;
+	max-width: 70rem; /* Avoid the card stretching more than that */
+	background-color: #5B3DAE;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+	scroll-snap-align: center;
+}
+
+.day1_card2{
+	position: relative;
+	height: 27vh; 
+	width: 77%;
+	max-width: 70rem; 
+	left: 4%;
+	background-color: #5B3DAE;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+.day1_card3{
+	position: relative;
+	height: 27vh;
+	width: 77%;
+	max-width: 70rem;
+	left: 8%;
+	background-color: #5B3DAE;
+	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	flex: 0 0 auto;
+}
+
+.day2_speakers_gallery {
+	position: relative;
+	height: 27vh;
+	left: 8%;
+	padding-bottom: 12.5%;
+	
 	display: flex;
+	flex-wrap: nowrap;
+	scroll-snap-type: x mandatory;
+	overflow-x: auto;
+	overflow-y: hidden;
+	
 	-webkit-overflow-scrolling: touch;
 	
 }
-div.day1_card1 {
 
+.day2_card1{
 	position: relative;
-	width: 55%;
-	max-width: 500px;
-	background-color: #5b3dae;
+	height: 27vh;
+	width: 77%;
+	max-width: 70rem;
+	background-color: #D0604F;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	flex: 0 0 auto;
 }
 
-div.day1_card2{
+.day2_card2{
 	position: relative;
-	width: 55%;
-	max-width: 500px;
-	left: 4.36%;
-	background-color: #5b3dae;
+	height: 27vh;
+	width: 77%;
+	max-width: 70rem;
+	left: 4%;
+	background-color: #D0604F;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	flex: 0 0 auto;
 }
 
-div.day1_card3{
+.day2_card3{
 	position: relative;
-	width: 55%;
-	max-width: 500px;
-	left: 8.72%;
-	background-color: #5b3dae;
+	width: 77%;
+	max-width: 70rem;
+	left: 8%;
+	background-color: #D0604F;
 	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	flex: 0 0 auto;
 }
 
-div.day2_speakers_gallery {
+.img_speakers {
+	object-fit: cover; /* fit without deforming */
+	width: 44%; /* % of .day_card div, which is the parent element */
+	height: 90%; 
 	position: relative;
-	height: 27.5%;
-	left: 8.33%;
-	padding-bottom: 12.5%;
-	display: flex;
-	flex-wrap: nowrap;
-	overflow-x: auto;
-}
-
-div.day2_card1{
-	position: relative;
-	width: 55%;
-	max-width: 500px;
-	background-color: #DF7B6C;
-	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+	left: 5%;
+	top: 5%;
 	border-radius: 10px;
-	flex: 0 0 auto;
 }
 
-div.day2_card2{
+.content{
+	width: 40%; 
 	position: relative;
-	width: 55%;
-	max-width: 500px;
-
-	left: 4.36%;
-	background-color: #DF7B6C;
-	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
-	border-radius: 10px;
-	flex: 0 0 auto;
+	left: 53%; /* % of .content div, which is the parent element */
+	bottom: 85%;
 }
 
-div.day2_card3{
+.speaker_name {
 	position: relative;
-	width: 55%;
-	max-width: 500px;
-	left: 8.72%;
-	background-color: #DF7B6C;
-	box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
-	border-radius: 10px;
-	flex: 0 0 auto;
-}
-
-img.img_speakers {
-	object-fit: cover;
-	width: 40.98%;
-	height: 81.82%;
-	position: relative;
-	left: 6.1%;
-	right: 54.92%;
-	top: 9.09%;
-	bottom: 9.09%;
-	border-radius: 4px;
-}
-
-p.header{
-	position: absolute;
-	left: 51.18%;
-	right: 6.1%;
-	top: 13%;
-	bottom: 50%;
-
-	font-family: 'Verdana';
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+	
+	margin-top: 8%; /* % of .content div, which is the parent element */
 	font-weight: 700;
-	font-size: 1.67vh;
+	font-size: 2.2vh;
 	line-height: 1.33;
 
 	color: #ffffff;
 }
 
-p.info{
-	position: absolute;
-	left: 51.18%;
-	right:  6.1%;
-	top: 55%;
-	bottom: 37.73%;
+.company{
+	position: relative;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+	font-weight: 700;
+	font-size: 1.8vh;
+	line-height: 1.33;
+	margin-top: 3%; /* % of .content div, which is the parent element */
 
-	font-family: 'Verdana';
+	color: #ffffff;
+	
+}
+
+.info{
+	position: relative;
+	margin-top: 8%; /* % of .content div, which is the parent element */
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-weight: 400;
-	font-size: 0.9vh;
+	font-size: 1.5vh;
 	line-height: 1.21;
 	letter-spacing: 0.035vw;
 	color: #ffffff;
 }
 
 hr{
-	position: absolute;
-	left: 49.18%;
-	right: 6.76%;
-	top: 67.27%;
-	bottom: 32.73%;
-
-	border: 1px solid #ebeaea;
+	position: relative;
+	margin-top: 8%; 
+	width: 80%; /* % of .content div, which is the parent element */
+	border: solid;
+	color: #ebeaea;
+	background-color: #ebeaea;
 }
 
-img.plus{
-	position: absolute;
-	width: 3%;
-	left: 50%;
-	bottom: 16.67%;
-}
+.readmore{
+	position: relative;
+	margin-top: 8%; /* % of .content div, which is the parent element */
 
-svg.arrow1{
-	position: fixed;
-	width: 4%;
-	bottom: 77%;
-	right: 13%;
-
-}
-
-svg.arrow2{
-	position: fixed;
-	width: 4%;
-	bottom: 58%;
-	right: 13%;
-}
-
-p.readmore{
-	position: absolute;
-	left: 56.15%;
-	right: 6.1%;
-	bottom: 15.42%;
-
-	font-family: 'Verdana';
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-weight: 700;
-	font-size: 1.25vh;
+	font-size: 1.3vh;
 	line-height: 1.22;
 
 	letter-spacing: 0.035vw;
-
-	color: #E0E0E0;
+	background-color: inherit;
+	color: #ebeaea;
 }
 
-div.divsponsors {
+/* ----------------------------sponsors--------------------------------- */
+
+
+.sponsors_container {
 	position: relative;
-	height: 30vh;
 	background-color: #dcdcdc;
 }
 
-svg.sponsor-h {
+.sponsors_title{
 	position: relative;
-	width: 91%;
-	left: 5%;
-	top: -2vh;
+	text-align: center;
+	padding-bottom: 8%;
+	
+	color: #292929;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 5vh;
 }
 
-svg.subspon-l1 {
-	position: relative;
-	left: 5.5%;
-	width: 88%;
-	top: -1vh;
+.first-row-sponsors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 20vw));
+    gap: 2vh;
+	padding-bottom: 5%;
+	padding-left: 2%;
+    justify-content: center;
+
+}
+.rest-of-sponsors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 20vw));
+    row-gap: 1vh;
+    padding-top: 3%;
+    padding-left: 15%;
+    padding-bottom: 3%;
+    justify-content: center;
+    align-items: center;
 }
 
-svg.subspon-l2 {
-	position: relative;
-	left: 5.5%;
-	width: 88%;
-	top: -1vh;
+.first-row-sponsors > img {
+    width: 100%;
+}
+
+.rest-of-sponsors > img {
+   width: 50%;
 }
